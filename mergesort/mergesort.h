@@ -5,6 +5,7 @@
 
 #define UNIT_TESTING
 
+void splitMerge(int values[], int first, int end);
 void mergesort(int size, int values[]);
 
 #endif
