@@ -110,6 +110,19 @@ TEST(ArrayMerge, Handle_different_sizes_reversed) {
   arrays_match(11, result, expected);
 }
 
+TEST(ArrayMerge, HandleSTUFF) {
+  int num_arrays = 2;
+  int sizes[] = { 10, 5 };
+  int a1[] = { 3, 2, 5, 3, 8 };
+  int a0[] = { 3, 2, 0, 5, 8, 9, 6, 3, 2, 0 };
+  int* a[] = { a0, a1 };
+  int expected[] = { 7, 0, 2, 3, 5, 6, 8, 9 };
+  int* result;
+
+  result = array_merge(num_arrays, sizes, a);
+  arrays_match(8, result, expected);
+}
+
 int main(int argc, char* argv[]) {
   ::testing::InitGoogleTest(&argc, argv);
   return RUN_ALL_TESTS();

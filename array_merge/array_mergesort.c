@@ -1,4 +1,4 @@
-#include "mergesort.h"
+#include "array_mergesort.h"
 #include <stdio.h>
 #include <stdlib.h>
 

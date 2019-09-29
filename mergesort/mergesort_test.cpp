@@ -43,13 +43,15 @@ TEST(Mergesort, HandleMixed) {
   int expected[] = { 0, 2, 3, 5, 6, 8, 9 };
   mergesort(7, a);
   arrays_match(7, a, expected);
+  
 }
 
 TEST(Mergesort, HandleOrdered) {
   int a[] = { 0, 2, 3, 5, 6, 8, 9 };
   int expected[] = { 0, 2, 3, 5, 6, 8, 9 };
-  mergesort(7, a);
+  int testarr = mergesort(7, a);
   arrays_match(7, a, expected);
+  free(testarr);
 }
 
 TEST(Mergesort, HandleReversed) {
@@ -58,7 +60,6 @@ TEST(Mergesort, HandleReversed) {
   mergesort(7, a);
   arrays_match(7, a, expected);
 }
-val
 
 int main(int argc, char* argv[]) {
   ::testing::InitGoogleTest(&argc, argv);
