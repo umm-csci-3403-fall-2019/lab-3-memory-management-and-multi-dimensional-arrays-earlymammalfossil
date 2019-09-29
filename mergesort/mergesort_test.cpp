@@ -49,9 +49,8 @@ TEST(Mergesort, HandleMixed) {
 TEST(Mergesort, HandleOrdered) {
   int a[] = { 0, 2, 3, 5, 6, 8, 9 };
   int expected[] = { 0, 2, 3, 5, 6, 8, 9 };
-  int testarr = mergesort(7, a);
+  mergesort(7, a);
   arrays_match(7, a, expected);
-  free(testarr);
 }
 
 TEST(Mergesort, HandleReversed) {
