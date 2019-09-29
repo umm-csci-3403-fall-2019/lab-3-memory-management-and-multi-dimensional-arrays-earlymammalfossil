@@ -59,16 +59,9 @@ void splitMerge(int values[], int first, int end){
 
 void mergesort(int size, int values[]){
 
-	int end;
 	int first = 0;
 
-	if(size == 0){
-		end = 0;
-	} else {
-		end = size - 1;
-	}
-
-	splitMerge(values, first, end);	
+	splitMerge(values, first, size);	
 
   return;
 }

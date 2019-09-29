@@ -58,6 +58,7 @@ TEST(Mergesort, HandleReversed) {
   mergesort(7, a);
   arrays_match(7, a, expected);
 }
+val
 
 int main(int argc, char* argv[]) {
   ::testing::InitGoogleTest(&argc, argv);
