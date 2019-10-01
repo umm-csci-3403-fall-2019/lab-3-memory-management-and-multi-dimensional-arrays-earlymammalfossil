@@ -112,11 +112,11 @@ TEST(ArrayMerge, Handle_different_sizes_reversed) {
 
 TEST(ArrayMerge, HandleSTUFF) {
   int num_arrays = 2;
-  int sizes[] = { 10, 5 };
-  int a1[] = { 3, 2, 5, 3, 8 };
-  int a0[] = { 3, 2, 0, 5, 8, 9, 6, 3, 2, 0 };
+  int sizes[] = { 8, 5 };
+  int a1[] = { 3, 2, 1, 3, 8 };
+  int a0[] = { 5, 2, 5, 8, 9, 6, 3, 2};
   int* a[] = { a0, a1 };
-  int expected[] = { 7, 0, 2, 3, 5, 6, 8, 9 };
+  int expected[] = { 7, 1, 2, 3, 5, 6, 8, 9 };
   int* result;
 
   result = array_merge(num_arrays, sizes, a);
