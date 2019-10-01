@@ -38,7 +38,7 @@ void sortJoin(int values[], int first, int midpoint, int end){
       		values[i + first] = destination[i];
 
 	}
-
+        free(destination);   
 }
 
 
